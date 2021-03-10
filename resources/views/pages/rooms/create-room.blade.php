@@ -23,10 +23,18 @@
             <div class="my-4">
                 <x-label for="price" :value="__('Price per night')" />
 
-                <x-input id="price" class="block mt-1 w-full" type="number" name="price" :value="old('price')" required autofocus />
+                <x-input id="price" class="block mt-1 w-full" type="number" name="price" :value="old('price')" required />
             </div>
 
-            <x-textarea class="block mt-1 w-full"> </x-textarea>
+              <div class="my-4">
+                <x-label for="price" :value="__('Room Description')" />
+
+                <x-textarea class="block mt-1 w-full" name="description" :value="old('description')" required > </x-textarea>
+
+            </div>
+
+            
+
 
 
 
