@@ -10,13 +10,13 @@
 
             <div class="overflow-hidden rounded-lg shadow-lg">
 
-                <a href="#">
+                <a href="{{route('room.single', $id = $room->id)}}">
                     <img alt="Placeholder" class="block h-auto w-full" src="{{asset('images/'.$room->photo)}}">
                 </a>
 
                 <div class="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
+                        <a class="no-underline hover:underline text-black" href="{{route('room.single', $id = $room->id)}}">
                             {{$room->name}}
                         </a>
                     </h1>

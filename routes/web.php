@@ -23,7 +23,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('room/{id}', [FrontendController::class, 'showSingleRoom']);
+Route::get('room/{id}', [FrontendController::class, 'showSingleRoom'])->name('room.single');
 
 Route::resource('rooms', RoomController::class);
 
