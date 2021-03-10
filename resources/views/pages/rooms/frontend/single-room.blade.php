@@ -11,7 +11,7 @@
                 <div class='text-green-600 text-sm mb-2 mx-3 px-2'>${{$room->price}}/Night</div>
                 <div class='text-gray-500 font-thin text-sm mb-6 mx-3 px-2'>{{$room->description}}</div>
 
-                    <a href="#" class="w-full items-center"> <p class="w-full p-3 flex flex-col items-center bg-purple-600 hover:bg-purple-400 text-white"> Book Now</p></a>
+                    <div> <a href="#" class="w-full items-center"> <p class="w-full p-3 flex flex-col items-center bg-purple-600 hover:bg-purple-400 text-white"> Book Now</p></a></div>
 
             </div>
         </div>
