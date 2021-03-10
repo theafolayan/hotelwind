@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Reservations extends Model
 {
     use HasFactory;
+
+    public function room()
+    {
+        return $this->hasOne(Room::class);
+
+    }
+
+    protected $guarded = [''];
 }
