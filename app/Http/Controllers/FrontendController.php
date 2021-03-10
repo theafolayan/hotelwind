@@ -7,8 +7,10 @@ use App\Models\Room;
 
 class FrontendController extends Controller
 {
-    public function showSingleRoom(Room $room)
+    public function showSingleRoom($id)
     {
-        return view('pages.rooms.frontend.single-room');
+        $room = Room::findOrFail($id);
+        // dd($room);
+        return view('pages.rooms.frontend.single-room')->withRoom($room);
     }
 }
