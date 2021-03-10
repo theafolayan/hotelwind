@@ -14,7 +14,7 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.rooms.frontend.all-rooms');
     }
 
     /**
@@ -36,7 +36,15 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, array(
+            'name' => 'required',
+            'price' => 'required|min:1|max:6',
+            'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ));
+
+        $photo_url = $request->file('photo')->storePublicly('uploads');
+
+        return redirect()->route('rooms.index');
     }
 
     /**
