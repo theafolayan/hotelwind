@@ -24,6 +24,7 @@ class CreateReservationsTable extends Migration
             $table->string('date_of_arrival');
             $table->mediumText('reservation_note');
             $table->timestamps();
+
         });
     }
 
