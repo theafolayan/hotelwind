@@ -22,7 +22,10 @@ class RoomFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->sentence(5),
+            'description' => $this->faker->paragraph(3),
+            'price' => $this->faker->numberBetween(10, 900),
+            'photo' => 'default.jpeg',
         ];
     }
 }

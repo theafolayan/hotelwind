@@ -14,7 +14,10 @@ class RoomController extends Controller
      */
     public function index()
     {
-        return view('pages.rooms.frontend.all-rooms');
+
+        $rooms = Room::all();
+        return view('pages.rooms.frontend.all-rooms')->withRooms($rooms);
+        // dd($rooms);
     }
 
     /**
@@ -42,7 +45,15 @@ class RoomController extends Controller
             'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ));
 
-        $photo_url = $request->file('photo')->storePublicly('uploads');
+
+        $uploadedFile = $request->file('photo');
+
+        $photo_name = $uploadedFile->getClientOriginalName();
+        $imageName = time() . '.' . $request->photo->extension();
+        $request->photo->move(public_path('images'), $imageName);
+        // $photoExtension = $uploadedFile->getClientOriginalExtension();
+        // $uploadedFile->storePubliclyAs('uploads', $photo_name );
+        Room::create(['photo' => $imageName , 'name' => $request->name, 'price' => $request->price, 'description' => $request->description]);
 
         return redirect()->route('rooms.index');
     }
