@@ -26,6 +26,10 @@
                 <x-input id="price" class="block mt-1 w-full" type="number" name="price" :value="old('price')" required autofocus />
             </div>
 
+            <x-textarea class="block mt-1 w-full"> </x-textarea>
+
+
+
 
 
             <div class="flex items-center justify-end mt-4">
