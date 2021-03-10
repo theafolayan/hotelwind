@@ -24,7 +24,8 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.rooms.create-room');
+
     }
 
     /**
@@ -46,7 +47,7 @@ class RoomController extends Controller
      */
     public function show(Room $room)
     {
-        //
+
     }
 
     /**
