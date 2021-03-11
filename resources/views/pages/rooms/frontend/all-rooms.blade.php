@@ -24,7 +24,7 @@
 
                 <div class="flex justify-between leading-none p-2 md:p-4">
 
-                        <a class="p-3 bg-purple-300 text-white hover:bg-purple-200 text-sm" href="#">
+                        <a class="p-3 bg-purple-300 text-white hover:bg-purple-200 text-sm" href="{{route('reservation.create', $room->id)}}">
                             Book Now
                         </a>
                         <p class="text-grey-darker text-sm pt-3">

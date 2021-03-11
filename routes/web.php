@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('room/{room}/create-reservation', [ReservationController::class, 'create'    ]);
+Route::get('room/{room}/create-reservation', [ReservationController::class, 'create' ])->name('reservation.create');
 
 Route::post('/crete-reservation', [ReservationController::class, 'store'])->name('reservation.store');
 
